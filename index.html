@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Paradise Nursery</title>
-    <base href="/e-plantShopping/">
+    
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@reduxjs/toolkit@1.9.5/dist/redux-toolkit.umd.min.js"></script>
+    <script src="https://unpkg.com/react-redux@8.0.5/dist/react-redux.min.js"></script>
+
+    <link rel="stylesheet" href="./App.css">
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./App.jsx"></script>
+
+    <script type="text/babel" src="./CartSlice.jsx"></script>
+    <script type="text/babel" src="./store.js"></script>
+    <script type="text/babel" src="./AboutUs.jsx"></script>
+    <script type="text/babel" src="./CartItem.jsx"></script>
+    <script type="text/babel" src="./ProductList.jsx"></script>
+    <script type="text/babel" src="./App.jsx"></script>
+
+    <script type="text/babel">
+      // This boots up the React engine into our root div container
+      const root = ReactDOM.createRoot(document.getElementById('root'));
+      root.render(React.createElement(App));
+    </script>
   </body>
 </html>
